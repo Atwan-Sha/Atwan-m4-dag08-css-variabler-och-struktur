@@ -1,0 +1,284 @@
+/* ===== Dag 3: grunder, boxmodell ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222222;
+  background-color: #fffaf3;
+}
+
+header {
+  background-color: #5b3a29;
+  color: #ffffff;
+  padding: 16px 24px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+}
+
+main {
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+article {
+  background-color: #ffffff;
+  border: 1px solid #e3d5c3;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+article img,
+#om-oss img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.knapp {
+  display: inline-block;
+  background-color: #8c1010;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #2b1c14;
+  color: #ffffff;
+  padding: 24px;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+address {
+  font-style: normal;
+}
+
+/* ===== Dag 4: typografi och färg ===== */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+  color: #3b2418;
+}
+
+header h1 {
+  color: #ffffff;
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin: 12px 0 8px;
+}
+
+.pris {
+  font-weight: 700;
+  color: #8c1010;
+}
+
+a {
+  color: #8c1010;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #5e0a0a;
+}
+
+nav a {
+  font-weight: 600;
+}
+
+.knapp:hover {
+  background-color: #6f0c0c;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+#hero {
+  background-color: #f3e3cf;
+  padding: 32px 24px;
+  border-radius: 8px;
+}
+
+#hero p {
+  font-size: 1.125rem;
+  max-width: 60ch;
+}
+
+/* Formulär */
+.falt,
+.val {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.val label {
+  display: inline;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  max-width: 28rem;
+  padding: 10px 12px;
+  border: 2px solid #8a7a6a;
+  border-radius: 6px;
+  font: inherit;
+}
+
+fieldset {
+  border: 1px solid #e3d5c3;
+  border-radius: 8px;
+  margin: 0 0 16px;
+  padding: 12px 16px;
+}
+
+legend {
+  font-weight: 700;
+  padding: 0 8px;
+}
+
+/* ===== Dag 5: Flexbox ===== */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+article .pris {
+  margin-top: auto;
+}
+
+/* ===== Dag 6: Grid ===== */
+.meny-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.meny-lista article {
+  margin-bottom: 0;
+}
+
+#om-oss {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px 32px;
+}
+
+#om-oss h2 {
+  grid-column: 1 / -1;
+}
+
+/* ===== Dag 7: Responsiv design (mobile first) ===== */
+@media (min-width: 600px) {
+  main {
+    padding: 32px;
+  }
+
+  #hero {
+    padding: 56px 40px;
+  }
+
+  #hero h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 900px) {
+  #om-oss {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  #om-oss img {
+    grid-row: 2 / span 2;
+    grid-column: 2;
+  }
+
+  header {
+    padding: 20px 48px;
+  }
+}
