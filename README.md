@@ -56,7 +56,7 @@ Jämför före och efter i webbläsaren på tre bredder. Ta bort den gamla `styl
 - [ ] Färger och avstånd i resten av CSS:en använder `var(--...)`, inga hårdkodade hex-värden kvar utom i variabelfilen (och ev. vitt).
 - [ ] CSS är uppdelad i minst `variables`, `base`, `layout` och `components`.
 - [ ] Sidan ser exakt likadan ut som innan.
-- [ ] Variablerna har samma namn och värden som dina tokens i Figma.
+- [ ] Variabelnamnen beskriver roll, inte utseende (`--color-primary`, inte `--red`).
 - [ ] Du har pushat till din fork och skickat in länken.
 
 ## Tips om du fastnar
@@ -76,5 +76,6 @@ I formuläret fyller du i:
 
 ## Vill du mer? (frivilligt)
 
+- Gör dina egna tokens från modul 3 (färger, typsnitt, avstånd) till en egen `tokens.css` med samma namn som i din Figma-fil, och prova att byta kaféets färger mot dina. Ingen inlämning.
 - Lägg till en `--shadow` och en `--radius`-variabel och använd dem.
 - Skapa en mörk variant av paletten som byter variablerna i en `@media (prefers-color-scheme: dark)`.
