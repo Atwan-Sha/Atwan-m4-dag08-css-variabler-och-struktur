@@ -1,0 +1,71 @@
+/** Component Styles: buttons, cards, images, forms */
+article {
+	background-color: var(--color-card-bg);
+	border: 1px solid var(--color-card-border);
+	border-radius: 8px;
+	padding: var(--sp-2);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--sp-1);
+}
+article .price {
+	color: var(--color-accent);
+	font-weight: bold;
+	margin-top: auto;
+}
+article:hover {
+	transform: scale(1.02) rotate(1deg);
+	transition: transform 0.2s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	/* height: auto; */
+	border-radius: 4px;
+}
+article img {
+	max-height: 240px;
+	width: auto;
+}
+
+.btn {
+	background-color: var(--color-accent);
+	color: var(--color-text-light);
+	font-family: var(--font-family-hero);
+	font-size: var(--font-size-hero);
+	padding: 12px 20px;
+	border: none;
+	border-radius: 6px;
+	text-decoration: none;
+	display: inline-block;
+}
+.btn:hover {
+	background-color: var(--color-accent-hover);
+	cursor: pointer;
+}
+
+input,
+select,
+fieldset,
+textarea {
+	font: inherit;
+	padding: 4px var(--sp-1);
+	margin: var(--sp-1) 0;
+	border-radius: 4px;
+	border: 2px solid var(--color-input-border);
+}
+input[type='text'],
+input[type='email'],
+textarea {
+	width: 100%;
+	max-width: 28rem;
+}
+label,
+legend {
+	font-weight: bold;
+}
+form .btn {
+	margin-top: var(--sp-2);
+}
