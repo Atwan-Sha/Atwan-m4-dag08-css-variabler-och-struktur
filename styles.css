@@ -11,7 +11,7 @@
 }
 
 body {
-	background-color: var(--color-background);
+	background-color: var(--color-bg);
 	color: var(--color-text);
 	font-family: var(--font-family-body);
 	font-size: var(--font-size-body);
@@ -24,7 +24,7 @@ body {
 	/* display: flex;
 	flex-direction: column;
 	justify-content: space-between; */
-	/* gap: 16px; */
+	/* gap: var(--sp-2); */
 }
 
 h1,
@@ -35,11 +35,9 @@ h3 {
 	line-height: var(--line-height-heading);
 }
 
-/* *Flexbox, Motivering:
-* Ändras endast horizontellt på en linje, med eventuell wrap (eller hamburger meny) */
 header {
 	background-color: var(--color-header);
-	padding: 16px 24px;
+	padding: var(--sp-2) var(--sp-3);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -59,7 +57,7 @@ nav ul {
 footer {
 	background-color: var(--color-footer);
 	color: var(--color-text-light);
-	padding: 16px 24px;
+	padding: var(--sp-2) var(--sp-3);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -81,46 +79,42 @@ footer a:hover {
 main {
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 24px;
+	padding: var(--sp-3);
 }
 
 #hero {
-	background-color: var(--color-hero-background);
+	background-color: var(--color-hero-bg);
 	font-family: var(--font-family-hero);
 	font-size: var(--font-size-hero);
 	line-height: var(--line-height-hero);
-	padding: 32px 24px;
+	padding: var(--sp-4) var(--sp-3);
 	text-align: center;
-	margin-bottom: 16px;
+	margin-bottom: var(--sp-2);
 }
 #hero p {
 	max-width: 60ch;
-	margin: 8px auto;
+	margin: var(--sp-1) auto;
 }
 
-/* *Grid-Layout, Motivering:
-*Skalar smidigare ned när skärmbredden minskas, 
-*oavsett hur många items/kort det är i menyn, 
-*utan media-query, med bara 60% kod jämfört med flexbox! */
 .menu-list {
 	max-width: 1100px;
-	margin: 16px 0;
+	margin: var(--sp-2) 0;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	grid-auto-rows: 1fr;
 	gap: 20px;
 }
-/* *Flexbox-Layout i article då den bara skalas vertikalt */
+
 article {
-	background-color: var(--color-card-background);
+	background-color: var(--color-card-bg);
 	border: 1px solid var(--color-card-border);
 	border-radius: 8px;
-	padding: 16px;
+	padding: var(--sp-2);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 8px;
+	gap: var(--sp-1);
 }
 article .price {
 	color: var(--color-accent);
@@ -142,13 +136,10 @@ article img {
 	width: auto;
 }
 
-/* *Grid-Layout, Motivering:
-* Delar upp bild, text och knapp (väldigt olika storlekar) 
-*i tydliga kvadranter utan behov av flex-container-divs */
 #about {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 16px;
+	gap: var(--sp-2);
 }
 #about h2 {
 	text-align: center;
@@ -189,8 +180,8 @@ select,
 fieldset,
 textarea {
 	font: inherit;
-	padding: 4px 8px;
-	margin: 8px 0;
+	padding: 4px var(--sp-1);
+	margin: var(--sp-1) 0;
 	border-radius: 4px;
 	border: 2px solid var(--color-input-border);
 }
@@ -205,5 +196,5 @@ legend {
 	font-weight: bold;
 }
 form .btn {
-	margin-top: 16px;
+	margin-top: var(--sp-2);
 }

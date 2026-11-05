@@ -1,5 +1,5 @@
 :root {
-	--color-background: #fffaf3;
+	--color-bg: #fffaf3;
 	--color-header: #5b3a29;
 	--color-footer: #2b1c14;
 	--color-accent: #8c1010;
@@ -7,9 +7,9 @@
 	--color-text: #222222;
 	--color-text-light: #ffffff;
 	--color-heading: #3b2418;
-	--color-card-background: #ffffff;
+	--color-card-bg: #ffffff;
 	--color-card-border: #e3d5c3;
-	--color-hero-background: #f3e3cf;
+	--color-hero-bg: #f3e3cf;
 	--color-link: #8c1010;
 	--color-link-hover: #5e0a0a;
 	--color-focus: #1a73e8;
@@ -29,8 +29,12 @@
 	--font-size-hero: 1.125rem;
 	--line-height-hero: 1.6;
 
+	--sp-1: 8px;
+	--sp-2: 16px;
+	--sp-3: 24px;
+	--sp-4: 32px;
+	--sp-5: 48px;
 
-  
 	/* TEST: Dark & Serious Mode */
 	/* --color-background: #222222;
 	--color-card-background: #2b1c14;
