@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boka bord - Kafé Rubiácea</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Kafé Rubiácea</h1>
+    <nav aria-label="Huvudmeny">
+      <ul>
+        <li><a href="index.html">Startsida</a></li>
+        <li><a href="index.html#menu">Meny</a></li>
+        <li><a href="contact.html" aria-current="page">Boka bord</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Boka bord</h2>
+    <p>Fyll i formuläret så bekräftar vi din bokning inom ett dygn.
+      Fält markerade med * är obligatoriska.
+    </p>
+
+    <form action="#" method="post">
+      <div class="field">
+        <label for="name">Namn *</label>
+        <input type="text" id="name" name="name" required autocomplete="name" placeholder="För- och efternamn"
+          minlength="2" maxlength="100">
+      </div>
+      <div class="field">
+        <label for="email">E-postadress *</label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="namn@exempel.se"
+          maxlength="100">
+      </div>
+      <div class="field">
+        <label for="phone">Telefon (valfritt)</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="070123456" maxlength="20">
+      </div>
+      <div class="field">
+        <label for="date">Datum *</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <label for="guests">Antal personer *</label>
+      <select id="guests" name="guests" required>
+        <option value="">Välj antal</option>
+        <option value="1">1 person</option>
+        <option value="2">2 personer</option>
+        <option value="3">3 personer</option>
+        <option value="4">4 personer</option>
+        <option value="5">5 personer</option>
+        <option value="6">6 personer</option>
+      </select>
+
+      <fieldset>
+        <legend>Kostönskemål</legend>
+        <input type="checkbox" id="vegetarian" name="diet" value="vegetarian">
+        <label for="vegetarian">Vegetarisk</label>
+        <input type="checkbox" id="vegan" name="diet" value="vegan">
+        <label for="vegan">Vegansk</label>
+        <input type="checkbox" id="glutenfree" name="diet" value="glutenfree">
+        <label for="glutenfree">Glutenfri</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Hur vill du få bekräftelsen? *</legend>
+        <input type="radio" id="confirm-email" name="confirmation" value="email" required>
+        <label for="confirm-email">E-post</label>
+        <input type="radio" id="confirm-sms" name="confirmation" value="sms">
+        <label for="confirm-sms">SMS</label>
+      </fieldset>
+
+      <label for="requests">Övriga önskemål</label>
+      <textarea id="requests" name="requests" rows="5" maxlength="500"></textarea>
+
+      <br>
+      <input type="checkbox" id="consent" name="consent" required>
+      <label for="consent">Jag godkänner att Kafé Rubiácea sparar mina uppgifter för bokningen. *</label>
+      <br>
+      <button type="submit" class="btn">Skicka bokning</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kafé Rubiácea</p>
+    <address>
+      Fiktivgatan 1, 111 11 Stockholm<br>
+      <a href="mailto:hej@rubiacea.example">hej@rubiacea.example</a>
+    </address>
+  </footer>
+</body>
+
+</html>
